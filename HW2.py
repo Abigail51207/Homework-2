@@ -30,6 +30,8 @@ class Course:
 
     def __str__(self):
         return f"{self.cid}({self.credits}): {self.cname}"
+
+    
     
     __repr__ = __str__
 
@@ -184,6 +186,8 @@ class Loan:
     def __getloanID(self):
         return random.randint(10000, 99999)
 
+
+
 class Person:
     '''
         >>> p1 = Person('Jason Lee', '204-99-2890')
@@ -304,7 +308,7 @@ class Staff(Person):
         return globals()["Student"](person.name, person.get_ssn())
 
 
-    
+
 class Student(Person):
     '''
         >>> C = Catalog()
@@ -534,7 +538,6 @@ class StudentAccount:
     def chargeAccount(self, amount):
         self.balance += amount
         return self.balance
-
 
 
 def run_tests():
